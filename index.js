@@ -1,10 +1,5 @@
-// if (process.env.NODE_ENV !== 'production') {
-    
-// }
 const express = require('express')
 const app = express()
-// const axios=require('axios')
-// const cheerio=require('cheerio')
 require('dotenv').config();
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT ;
@@ -14,10 +9,10 @@ mongoose.connect(dbUrl, () => console.log("Database Connected"))
 const postRoutes = require('./routes/post')
 const cors = require('cors');
  const corsOptions = {
-     origin: 'https://insta-frontend-gasx.onrender.com',
+      origin: 'https://insfrontend.onrender.com',
      credentials: true,            //access-control-allow-credentials:true
      optionSuccessStatus: 200
- }
+  }
 app.use(cors(corsOptions));
 
 
